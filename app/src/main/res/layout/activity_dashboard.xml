@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/iv_back"
+    tools:context=".DashboardActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                app:cardElevation="5dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:src="@drawable/meal_logo"
+                        android:layout_marginTop="5dp"
+                        android:paddingHorizontal="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MEAL"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/blue"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" MATE"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-black"
+                            android:textColor="@color/black"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Goals"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_main"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/lipidsPieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lipids"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/proteinsPieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Proteins"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/carbsPieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Carbs"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/fibersPieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fibers"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My tools"
+                android:textSize="18sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/tvRecipes"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:text="Recipes"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-black"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/lightText"
+                    android:background="@drawable/bg_field"/>
+
+                <TextView
+                    android:id="@+id/tvFridge"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:text="Fridge"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="@color/lightText"
+                    android:background="@drawable/bg_field"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/tvProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:text="Profile"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-black"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/lightText"
+                    android:background="@drawable/bg_field"/>
+
+                <TextView
+                    android:id="@+id/tvPast"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:text="Past recipes"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:textColor="@color/lightText"
+                    android:background="@drawable/bg_field"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
